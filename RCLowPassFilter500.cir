@@ -1,0 +1,17 @@
+*low pass filter 
+*fc = 1/2piRC
+
+V0 in 0 SIN(0 10 500) 
+R1 in output 1k 
+C1 output 0 0.318u
+
+.tran 0.05m 5m 
+.control 
+run 
+set color2=red
+set color3=blue
+
+plot v(in) v(output) 
+
+.endc 
+.end 
